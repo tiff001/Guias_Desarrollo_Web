@@ -1,0 +1,25 @@
+body{
+    background-color: lightblue;
+}
+.contenedor{
+    font-size: 20px;
+}
+
+h2{
+    color: white;
+    text-decoration: underline ;
+}
+p.p1{
+    color: navy;
+    font-weight: bold;
+}
+p.p2{
+    text-transform: uppercase;
+    text-align: justify;
+}
+p.p3{
+    font-size: 12px;
+}
+span{
+    font-style: italic;
+}

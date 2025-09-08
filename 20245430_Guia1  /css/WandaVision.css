@@ -1,0 +1,72 @@
+body{
+    background: #691a2a;
+    background: linear-gradient(180deg, rgba(105, 26, 42, 1) 0%, rgba(92, 48, 61, 1) 20%, rgba(43, 47, 54, 1) 89%);
+    color: rgb(210, 215, 220);
+    font-family:serif;
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 20px;
+    padding: 20px;
+}
+#encabezado{
+    padding: 20px ;
+    margin: 20px;
+    border-radius: 10px;
+}
+#titulo{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 3.6em; 
+    color: #d7d7d8;
+}
+.titulos{
+    text-align: center;
+    font-size: 2.5em;
+}
+.seccion{
+    text-align: justify;
+    border-radius: 10px;
+    margin: 20px ;
+    padding: 20px;
+}
+.articulo{
+    font-size: 22px;
+    text-align: center;
+}
+.imagen{
+    width: 700px;                
+    max-width: 650px;          
+    height: auto;
+    display: block;          
+    margin: 0 auto; 
+    border-radius: 10px;
+}
+.imagenes-reparto{
+    width: 550px;                
+    max-width: 200px;          
+    height: 200px;
+    display:flex;          
+    margin: 0 auto; 
+    border-radius: 50%;
+}
+#episodios-tabla{
+    width: 90%;
+    margin: 20px ;              
+    border-collapse: collapse;
+}
+#episodios-tabla th, #episodios-tabla td{
+    border: 1px solid rgb(142, 130, 142);      
+    padding: 20px;                 
+    text-align: center;
+}
+#episodios-tabla th{  
+    color: #b3b3b4;                
+    font-weight: bold;
+}
+#pie-pagina{
+    font-family:serif;
+    font-size: 15px;
+    text-align: center;
+    color: #d7d7d8;              
+}
+
