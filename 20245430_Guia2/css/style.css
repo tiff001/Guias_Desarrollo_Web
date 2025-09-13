@@ -1,0 +1,62 @@
+html{
+    font-size: 20px;
+}
+body{
+    color: #fcfcfc;
+    background-color: #355664;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.2rem;
+}
+h3{
+    font-size: 1rem;
+}
+footer{
+    background-color: black;
+    color: white;
+    font-size: 0.7rem;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+}
+/*Con sus conocimientos de la unidad de medida “rem”, responda ¿Qué tamaño en pixeles tienen
+los h1, h2, h3 y el texto del footer?*/
+div.wrapper{
+    margin: 0 auto;
+    width: 80%;
+}
+section article{
+    background-color: rgba(33, 62, 74, 1);
+    margin-top: 20px;
+    padding: 12px;
+}
+section article{
+    font-size: 0.8rem;
+    text-align: justify;
+}
+nav span a{
+    background-color: white;
+    border-right: 1px solid;
+    color: black;
+    font-size: 0.6rem;
+    float: left;
+    padding: 10px;
+    text-decoration: none;
+}
+nav span a:hover{
+    background-color: #B2DFDB;
+}
+nav a[href*="sensacine.com/peliculas/pelicula-175305/reparto"]:hover {
+  background-color: #9E9E9E;
+}
+ article p::first-letter{
+    color: gold;
+    font-size: 1.5rem;
+ }
+section > article:first-child p::first-line {
+  text-decoration: underline;
+}
