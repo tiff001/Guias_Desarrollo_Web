@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:"Roboto Condensed", sans-serif ;
+    font-size: 20px;
+    background: linear-gradient(120deg, #f1b0b0, #f99999, #E45757);
+    color: rgb(47, 41, 33) ;
+    margin: 20px;
+    padding: 20px;
+}
+header{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 12px;
+    background-color: #fd5b7b;
+    margin: 20px;
+    border-radius: 5px ;
+}
+#titulo1{
+    color: #ffd6df;
+    text-align: center;
+    border-radius: 10px;
+}
+#titulo-nombre{
+    font-size: 35px;
+    color: #ed4869;
+    text-align: center;
+    text-shadow: 3px 2px 8px #f3d6de;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+nav a{
+    text-decoration: none;
+    color: #f13a5f;
+    font-size: 25px;
+}
+nav ul li{
+    display:inline-block;
+    margin: 0 10px;
+}
+.titulos{
+    font-size: 45px;
+    color: #f13a5f;
+    text-align: center;
+}
+#introduccion{
+    background-color: #f4cbd172;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: justify;
+}
+#intro-contenido{
+    display: flex;             
+    align-items: center;        
+    gap: 20px;  
+}
+#img-intro{
+    border: 0;
+    padding: auto;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+#introduccion p{
+    text-align: left
+}
+#sobre-mi{
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+}
+.img-sobre-mi{
+    width: 400px;                
+    max-width: 300px;          
+    height: auto;
+    display: block;          
+    margin: 0 auto; 
+    border-radius: 10px;
+}
+#educacion .card-educacion{
+    display:inline-block;
+    text-align: center;
+    margin: 10px;
+    font-size: 14px;
+}
+#educacion article{
+  gap: 20px;
+  font-weight: bold;
+}
+.imagenes-educacion{
+    width: 250px;                        
+    max-height: 250px;
+    display: block;          
+    margin: 0 auto; 
+    border-radius: 10px;
+}
+#educacion{
+    background-color: #f4cbd172;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: justify;
+}
+#hobbies{
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: justify;
+}
+#metas{
+    background-color: #f4cbd172;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: justify;
+}
+footer{
+    background-color: #fb839b;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #ffdce3;
+    font-size: 15px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+hr{
+    color: #ed4869;
+}
