@@ -24,7 +24,8 @@ footer{
     text-align: center;
 }
 /*Con sus conocimientos de la unidad de medida “rem”, responda ¿Qué tamaño en pixeles tienen
-los h1, h2, h3 y el texto del footer?*/
+los h1, h2, h3 y el texto del footer?
+Dado que el root esta definido a 20px y rem se basa en el root, 1rem = 20px, 1.2rem = 24px y 2 rem =40px*/
 div.wrapper{
     margin: 0 auto;
     width: 80%;
