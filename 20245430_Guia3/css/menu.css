@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial;
+}
+/*Estilos generales*/
+nav ul{
+    list-style: none;
+}
+nav li{
+    line-height: 2.5rem; /*Aumenta el alto de la línea de cada elemento*/
+}
+nav a{
+    color: #ddd;
+    display: block;
+    padding: 0 2.5rem;
+    text-decoration: none;
+}
+nav a:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*Primer nivel*/
+nav > ul{
+    background-color: #333;
+    width: 100%;
+    overflow: hidden;
+}
+nav>ul>li{          /*Elementos del primer nivel flotan a la izquierda*/
+    float: left;
+}
+
+/*Segundo nivel*/
+nav>ul>li>ul{     /*Para que el ul no cubra ambos niveles*/
+    position: absolute;
+    /*visibility: hidden;*/
+    display: none;
+}
+nav>ul>li:hover ul{   /*Se visualizarán cuando se le haga "hover"*/
+    display: block;
+}
+nav>ul>li>ul>li{
+    background-color: #222;
+}

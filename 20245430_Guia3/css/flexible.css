@@ -1,0 +1,161 @@
+/* Fuentes */
+@import url(https://fonts.googleapis.com/css?family=Didact+Gothic);
+
+* {
+    font-family: 'Didact Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos iniciales */
+body{
+    margin: 0;
+    background-color: #BBB;
+    color: #444;
+}
+
+h1 {
+    font-size: 1.3em;
+    text-align: center;
+    color: #464d52;
+}
+
+/* PARTE SUPERIOR */
+#superior {
+    width: 100%;
+    padding: 2% 0px;
+    background-color: #464d52;
+}
+#encabezado {
+    margin: 0px auto;
+    width: 80%;
+    min-width: 650px;
+    max-width: 960px;
+}
+#superior #encabezado #logo {
+    margin: 2% 0px;
+    width: 21%;
+}
+#descripcion {
+    width: 37.5%;
+    height: auto;
+    background-color: #888;
+    float: left;
+}
+#descripcion p {
+    margin: 5%;
+    color: white;
+    font-weight: bold;
+    line-height: 180%;
+    text-align: justify;
+}
+#imgDesc {
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+}
+#superior #encabezado #imgDesc img {
+    float: left;
+    width: 62.5%;
+    height: auto;
+}
+
+/* Contenido principal de las paginas */
+#contenido {
+    width: 80%;
+    margin: 0px auto;
+    clear: left;
+    min-width: 650px;
+    max-width: 960px;
+}
+
+/* Pie de pagina */
+footer {
+    text-align: center;
+    margin: 0;
+    font-size: .9em;
+    line-height: 2;
+    clear: both;
+    background-color: #464d52;
+    color: white;
+    width: 100%;
+}
+
+/* CONTENIDO DE LA PAGINA INDEX */
+.plan {
+    width: 26.7%;
+    padding: 2%;
+    background-color: white;
+    margin: 30px 1.5%;
+    border: solid 1px black;
+    border-radius: 10px;
+    float: left;
+    text-align: justify;
+}
+.plan img {
+    width: 100%;
+    height: auto;
+}
+#contenido div:nth-child(3n+1){
+    margin-left: 0px;
+}
+#contenido div:nth-child(3n){
+    margin-right: 0px;
+}
+.boton{
+    background-color: #464d52;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+    font-size: .9em;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background 1s;
+}
+.boton:hover{
+    background-color: #5077c7;
+}
+.boton a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    display: block;
+}
+
+/* CONTENIDO DE LA PAGINA PLANES */
+.planes{
+    width: 94%;
+    background: white;
+    padding: 1% 3%;
+}
+.planes img {
+    width: 100%;
+    border-radius: 15px;
+}
+.planes h1{
+    text-align: left;
+    font-size: 1.5em;
+}
+.planes .precio{
+    font-size: 1.1em;
+    margin: 20px 0 5px;
+    padding-bottom: 15px;
+    border-bottom: solid 2px grey;
+    font-weight: bold;
+}
+
+/* CONTENIDO DE LA PAGINA GALERIA */
+#galeria .plan {
+    margin: 30px 1.4% 10px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    font-size: 1em;
+    padding-bottom: 1px;
+}
+#galeria .plan p {
+    text-align: center;
+    font-style: italic;
+}

@@ -1,0 +1,88 @@
+@import url(htttps://fonts.googleapis.com/css?family=Muli);
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Muli', sans-serif;
+    text-align: justify;
+}
+header{
+    background: #16A085;
+    height: 130px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+footer{
+    background: #16A085;
+    height: 50px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+header div, footer div{
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+h1{
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+h2{
+    font-size: 2rem;
+}
+section{
+    margin: 0 auto;
+    width: 90%;
+    /*overflow: hidden;*/
+    padding-top: 150px;
+    padding-bottom: 70px ;
+    display: flex;
+    flex-wrap: wrap;
+}
+section article{
+    font-size: 0.9rem;
+    height: 340px;
+    width: 32.33%;
+    box-sizing: border-box;           /*coloca las imágenes en 3 columnas*/
+    margin: 0.5%;
+    border: 2px dashed #16A085;
+    padding: 1%;
+}
+section article img{    
+    display: block;       
+    height: 180px;
+    max-width: 80%;
+    margin: 5px auto;
+}
+section article h3{
+    text-align: center;
+}
+footer div{
+    padding-top: 1rem;
+}
+section article:nth-child(2){
+    background-color: rgba(70, 130, 180, 0.9);
+    position:static;
+    /*visibility: hidden;*/
+    display: none;
+    left: 100px;
+    top: 50px;
+}
+/*¿Cuáles son las diferencias entre elposicionamiento relativo y absoluto?
+En el posicionamiento relativo, el elemento sigue ocupando u lugar original, aunque se mueva, el espacio que 
+utilizaba sigue siendo reservado. 
+En el posicionamiento absoluto, el elemento sale del flujo normal, ya no se ocupa su espacio. Se posiciona 
+con respecto a su contenedor más cercano que tenga posición distinta*/
+
+/*¿Cuál es la diferencia entre ocultar los elementosocupando display: none y visibility: hidden?
+En display: none, el elemento desaparece y no ocupa espacio en el diseño, es como si no existiera.
+En visibility: hidden, el elemento desaparece pero sigue ocupando su espacio en el diseño. 
+*/
