@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    background-color: rgb(255, 250, 250);
+    padding: 20px;
+    margin: 20px;
+    font-family: "Raleway", sans-serif;
+
+}
+
+#titulo-principal{
+    font-size: 3em;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    color: #feb4ca;
+    font-family: 'Pacifico', cursive;
+}
+
+.navegacion {
+    text-align: center;  
+}
+
+.navegacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.navegacion ul li {
+    display: inline-flex;
+    margin: 0 10px;
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #ffb3c2;
+    font-size: 18px;
+}
+
+.navegacion a:hover {
+    color: #ffa9b5; 
+    text-decoration: underline;
+    }
+
+ h2.titulos {
+    font-size: 2em;
+    text-align: center;
+    margin: 15px;
+    padding: 5px;
+    color: #ffc3d5;;
+    font-family: "Quicksand", sans-serif;
+    clear: both;
+}
+
+.subtitulos {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    color: #ffa3b8;
+    font-family: "Quicksand", sans-serif;
+}
+
+hr{
+    border: 0.8px solid #ffebef;
+    margin-bottom: 15px;
+}
+
+.img{
+    float: left;
+    margin-right: 15px;  
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 300px;        
+    border-radius: 10px; 
+
+}
+
+#info-personal p{
+    font-size: 1em;
+    margin: 8px 1px;
+    padding: 8px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.marcador{
+    color: #ffc5cf;
+    font-weight: bold;
+}
+
+#info-materia {
+    font-size: 1em;
+    margin: 10px 1px;
+    padding: 10px;
+    line-height: 1.8;
+    color: #333;
+}
+
+#info-materia h3{
+    margin: 8px 1px;
+    padding: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+}
+
+#info-materia ul{
+    list-style: none;
+}
+
+/*Al colocar el grid afecta el titulo, ya que lo considera grid, por eso se debe especificar que ocupe ambas columnas */
+#guia > h2.titulos,
+#guia > hr {
+    grid-column: 1 / -1; 
+    text-align: center;
+}
+
+#guia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.guias {
+    border: 1px solid #ffe0ea;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(255, 195, 204, 0.25);
+}
+
+.guias a {
+    color: #feb7c7;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    line-height: 1.8; 
+}
+
+.guias ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.guias a:hover {
+    color: #ff3e6a;
+    text-decoration: underline;
+}
+
+
+.guias p {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+#foda {
+    margin-top: 30px;
+    padding: 10px;
+    line-height: 2;
+    text-align: justify;
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    #guia {
+        grid-template-columns: 2fr; 
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #guia {
+        grid-template-columns: 1fr; 
+    }
+
+    .img{
+        float: none;           
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0 14px;
+    }
+    .guias{
+        padding: 14px;
+        margin: 20px;
+    }
+  .guias p{ 
+        line-height: 1.7; 
+        text-align: justify 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #guia {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 16px;
+    }
+
+    .img{
+        float: none;           
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0 14px;
+    }
+    .guias{
+        padding: 10px;
+        margin: 15px;
+    }
+    .guias p{ 
+        line-height: 1.6; 
+        text-align: justify 
+  }
+    h2.titulos{
+        font-size: 25px;
+  }
+
+  .navegacion a{
+        font-size: 14px;
+  }
+}
