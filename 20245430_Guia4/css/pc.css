@@ -62,7 +62,6 @@ padding-left: 40px;
 #imgDesc img{
     width: 62.5%; /*600/ 960 =62.5%*/
     height: auto;
-    /*float: left;*/
     display: block;
 }
 
@@ -81,7 +80,6 @@ padding-left: 40px;
 #descripcion p{
     margin: 5%; /*20/ 360 =5%*/
     color: white;
-    font-weight: bold;
     line-height: 180%;
     text-align: justify;
     font-size: 1em;
