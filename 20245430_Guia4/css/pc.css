@@ -1,103 +1,98 @@
-/*MENÚ*/
-nav{
-    width: 100%;    /*960/ 960 = 100%*/
+/* MENU */
+
+nav { 
+    width: 100%;
     font-size: 1.4em;
 }
 
-nav ul{
+nav ul { 
     list-style: none;
     margin: 0px 0px 65px 0px;
 }
 
-nav ul li{
+nav ul li {
     float: left;
     margin: 0px;
     padding: 10px 0px 0px 0px;
     border-top: solid 2px white;
 }
 
-nav ul li a{
+nav ul li a { 
     text-decoration: none;
-    padding: .3em .5em;
+    padding: .3em .5em ;
     margin: 0em 0.5em;
     display: block;
     color: white;
-    transition: color 1s, transform 3s ;
+    transition: color 1s, transform 3s;
 }
 
-nav ul li a:hover{
-    color: #AAA;
-    transform:scale(1.5);
+nav ul li a#inicio { 
+    background: url(../imgs/turismo/home.png) no-repeat 0px 3px;
+    padding-left: 40px;
 }
 
-nav ul li a#inicio{
-background: url(../img/turismo/home.png) no-repeat 0px 3px;
-padding-left: 40px;
+nav ul li a#planes { 
+    background: url(../imgs/turismo/planes.png) no-repeat 0px 3px;
+    padding-left: 40px;
 }
 
-nav ul li a#planes{
-background: url(../img/turismo/planes.png) no-repeat 0px 3px;
-padding-left: 40px;
+nav ul li a#galeria { 
+    background: url(../imgs/turismo/galeria.png) no-repeat 0px 3px;
+    padding-left: 40px;
 }
 
-nav ul li a#galeria{
-background: url(../img/turismo/galeria.png) no-repeat 0px 3px;
-padding-left: 40px;
-}
-
-/*PARTE SUPERIOR*/
-#encabezado{
+/* PARTE SUPERIOR */
+#encabezado {
     margin: 0px auto;
     width: 80%;
-    min-width: 650px;   /*YA NO REACCIONARÁ SI LA PANTALLA ES MÁS PEQUEÑA QUE 650PX */
-    max-width: 960px;   /*YA NO REACCIONARÁ SI LA PANTALLA ES MÁS PEQUEÑA QUE 960PX */
+    min-width: 650px;
+    max-width: 960px;
 }
 
-#superior #encabezado #logo{
-    margin: 2% 0px; /*23/ 960 =2%*/
-    width: 21%;     /*200 / 960 = 21%*/
+#superior #encabezado #logo { 
+    margin: 2% 0px;
+    width: 21%;
     height: auto;
 }
 
-#imgDesc img{
-    width: 62.5%; /*600/ 960 =62.5%*/
+#imgDesc img { 
+    width: 62.5%;
     height: auto;
-    display: block;
+    float: left;
 }
 
-#imgDesc{
-    display: flex;
-    align-items: stretch;
-    gap: 0;
+#imgDesc {
+    overflow: hidden;
 }
 
-#descripcion{
-    width: 37.5%; /*360/ 960 = 37.5%*/
+#descripcion {
+    width: 37.5%;
     background-color: #888;
     float: left;
 }
 
-#descripcion p{
-    margin: 5%; /*20/ 360 =5%*/
+#descripcion p {
+    margin: 5%;
     color: white;
-    line-height: 180%;
+    font-weight: bold;
+    line-height: 170%;
     text-align: justify;
-    font-size: 1em;
+    font-size: 0.95em;
 }
 
-/*Contenido principal de las páginas*/
-#contenido{
+/* CONTENIDO PRINCIPAL DE LAS PAGINAS */
+#contenido {
     width: 80%;
     margin: 0px auto;
     clear: left;
     overflow: auto;
-    min-width: 650px;   /*YA NO REACCIONARÁ SI LA PANTALLA ES MÁS PEQUEÑA QUE 650PX */
-    max-width: 960px;   /*YA NO REACCIONARÁ SI LA PANTALLA ES MÁS PEQUEÑA QUE 960PX */
+    min-width: 650px;
+    max-width: 960px;
 }
 
-/*Contendio de la página INDEX*/
-.plan{
-    width: 26.5%; /*258/ 960 = 27%*/
+/* CONTENIDO DE LA PAGINA INDEX */
+.plan {
+    width: 26.7%;
     padding: 2%;
     margin: 30px 1.5%;
     background-color: white;
@@ -107,21 +102,22 @@ padding-left: 40px;
     text-align: justify;
 }
 
-.plan img{
+.plan img { 
     width: 100%;
 }
 
-/*Primer div, cuarto div, ... */
-#contendio div:nth-child(3n+1){
+/* PRIMER DIV, CUARTO DIV ...  */
+
+#contenido div:nth-child(3n+1) { 
     margin-left: 0px;
 }
 
-/*Tercer div, sexto div, ... */
-#contenido div:nth-child(3n){
+#contenido div:nth-child(3n) { 
     margin-right: 0px;
 }
 
-/* Contendio de la página planes*/
+/* CONTENIDO DE LA PAGINA PLANES */
+
 .planes{
     width: 94%;
     background: white;
@@ -146,8 +142,8 @@ padding-left: 40px;
     font-weight: bold;
 }
 
-/* Contenido de la página galeria*/
-#galeria .plan{
+/* CONTENIDO DE LA PAGINA GALERIA */
+#galeria .plan { 
     font-size: 1em;
     padding-bottom: 10px;
     margin: 30px 1.4% 10px;
