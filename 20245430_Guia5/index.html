@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactuando con JavaScript</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/buttons.js" defer></script>
 </head>
 <body>
@@ -12,9 +12,16 @@
         <h1>Interactuando con JavaScript</h1>
         <div class="flex-container">
             <button id="idBtnAlert" onclick="aviso()">Función alert</button>
-
+            <button id="idBtnPromt" onclick="capturarDatos()"> Función promt</button>
+            <button id="idBtnConfirm" onclick="confirmacion()"> Función confirm</button>
+            <button id="idBtnParrafo" onclick="dibujarParrafo()"> Dibujar párrafo</button>
         </div>
 
+        <h4>Párrafo de información</h4>
+        <p id="idParrafo"></p>
+        <a href="pages/tablas.html">Crear tablas</a>
+        <a href="pages/numeroAleatorio.html">Adivina el número</a>
+        <a href="pages/operacionesBasicas.html">Operaciones básicas</a>
     </div>
 </body>
 </html>
