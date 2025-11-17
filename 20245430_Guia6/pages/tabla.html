@@ -46,7 +46,42 @@
         </div>
     </header>
     <div class="container-lg">
-           <!-- CONTINUAR CON EL CODIGO AQUI -->
+        <!-- CONTINUAR CON EL CODIGO AQUI -->
+         <div class="row">
+            <div class="col-12">
+                <div class="shadow-lg p-3 mt-5 bg-body rounded">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Generando tabla con funciones</h3>
+                            <button id="idBtnNewTable" type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#idModal">
+                            <i class="bi bi-table"></i> Crear tabla
+                            </button>
+
+                            <div class="col-12">
+                                <div class="idDivResultado" class="fs-6 p-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+         <!--COMPONENTE MODAL DE BOOTSTRAP-->
+         <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalLabel">Definición de tabla</h1>
+                        <button type="button" class="btn-close" data-bs-dismss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal">
+                        <form id="idForm">
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+         </div>
     </div>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../js/tabla.js" defer></script>

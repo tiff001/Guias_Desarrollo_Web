@@ -50,6 +50,41 @@
         </div>
         <div class="d-flex flex-column flex-shrink-0 p-3 colum-container contenedor">
             <!-- CONTINUAR CON EL CODIGO AQUI -->
+             <div class="container-fluid py-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="h-100 p-4 bg-light border rounded-3">
+                            <h3>Creando un arreglo númerico</h3>
+                            <form onsubmit="return false">
+                                <div class="row mb-3">
+                                    <label for="inputNumero" class="col-sm-4 col-form-label">Ingrese un número en el arreglo</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control" id="inputNumero" value="1">
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn btn-success" id="idBtnAgregar">
+                                    <i class="bi bi-plus" height="16" width="16"></i>
+                                    Agregar
+                                </button>
+                                <button type="button" class="btn btn-primary" id="idBtnOrdenar">
+                                    <i class="bi bi bi-list-ol" height="16" width="16"></i>
+                                    Ordenar
+                                </button>                                
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-12 py-5">
+                        <div id="idContainerArreglo" class="row text-center bg-light">
+                            <h3 class="none">Valores del arreglo ingresado</h3>
+                        </div>
+                        <br/>
+                        <div id="idContainerArregloOrdenado" class="row text-center bg-light">
+                            <h3>Arreglo Ordenado</h3>
+                        </div>
+                    </div>
+                </div>
+             </div>
         </div>
     </main>
 

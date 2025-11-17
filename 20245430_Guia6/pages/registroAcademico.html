@@ -53,15 +53,46 @@
             <div class="container-fluid py-5">
                 <div class="row">
                     <div class="col-md-6">
+                        <div class="h-100 p-4 bg-light border rounded-3">
+                            <h3>Datos de estudiantes</h3>
+                            <form onsubmit="return false">
+                                <div class="row mb-3">
+                                    <label for="inputCarnet" class="col-sm-2 col-form-label">Carnet</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputCarnet" maxlength="5">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputNombre" class="col-sm-2 col-form-label">Nombres</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputNombre">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputApellidos">
+                                    </div>
+                                </div>
 
+                                <button type="button" class="btn btn-success" id="idBtnAgregarEstudiante">
+                                    <i class="bi bi-person-plus-fill" height="16" width="16"></i>
+                                    Registrar
+                                </button>
+                                <button type="button" class="btn btn-primary" id="idBtnMostrarEstudiantes">
+                                    <i class="bi bi-person-plus-fill"></i> Mostrar estudiantes
+                                </button>
+                            </form>
+                        </div>
                     </div>
-
+                    <div class="col-md-12 py-5">
+                        <h3>Estudiantes registrados</h3>
+                        <div id="idContainerEstudiantes">Ningúno</div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </main>
-
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../js/registroAcademicoLocalStorage.js" defer></script>
 </body>
