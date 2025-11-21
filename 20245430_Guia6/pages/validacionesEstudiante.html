@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- MISMOS RECURSOS QUE USA TU FORMULARIO -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/stylesFunciones.css" rel="stylesheet" />
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png" />
+
+    <title>Ficha de estudiante</title>
+</head>
+<body>
+
+    <!-- HEADER: usa la misma estructura que tus otras páginas de funciones -->
+    <header>
+        <div class="px-3 py-2 text-bg-dark fixed-top">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="../indexFunciones.html"
+                       class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <img src="../img/js.png" alt="" width="32" height="32" class="me-2" />
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small nav-bar">
+                        <li class="text-center">
+                            <a href="./recursividad.html" class="nav-link text-white">
+                                <i class="bi bi-arrow-clockwise bi-2 d-block"></i>
+                                Recursividad
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a href="./tabla.html" class="nav-link text-white">
+                                <i class="bi bi-table bi-2 d-block"></i>
+                                Creando una Tabla
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a href="./formulario.html" class="nav-link text-white">
+                                <i class="bi bi-ui-checks bi-2 d-block"></i>
+                                Formulario
+                            </a>
+                        </li>
+                        <li class="text-center nav-bar-li-active">
+                            <a href="./validacionesEstudiante.html" class="nav-link text-white">
+                                <i class="bi bi-person-badge bi-2 d-block"></i>
+                                Ficha estudiante
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL CON LA MISMA CLASE QUE TU FORMULARIO -->
+    <div class="container-md">
+        <div class="row">
+            <div class="col-12">
+                <div class="shadow-lg p-3 mt-5 bg-body rounded">
+
+                    <h3 class="mb-3">Validación de ficha de estudiante</h3>
+                    <p>
+                        Complete la siguiente ficha.
+                    </p>
+
+                    <form id="formEstudiante" novalidate>
+                        <!-- Carnet -->
+                        <div class="mb-3">
+                            <label for="carnet" class="form-label">Carnet (AB001)</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="carnet"
+                                placeholder="AB001"
+                            />
+                            <div class="form-text">Formato: 2 letras y 3 números.</div>
+                            <div class="invalid-feedback">
+                                El carnet debe tener 2 letras seguidas de 3 números. Ej: AB001.
+                            </div>
+                        </div>
+
+                        <!-- Nombre completo -->
+                        <div class="mb-3">
+                            <label for="nombreCompleto" class="form-label">Nombre completo</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nombreCompleto"
+                                placeholder="Tiffany Meléndez"
+                            />
+                            <div class="form-text">
+                                Solo letras y espacios, sin números ni caracteres especiales.
+                            </div>
+                            <div class="invalid-feedback">
+                                Ingrese un nombre válido (solo letras y espacios).
+                            </div>
+                        </div>
+
+                        <!-- DUI -->
+                        <div class="mb-3">
+                            <label for="dui" class="form-label">DUI</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="dui"
+                                placeholder="01234567-8"
+                            />
+                            <div class="form-text">Formato: ########-#</div>
+                            <div class="invalid-feedback">
+                                El DUI debe tener el formato ########-#.
+                            </div>
+                        </div>
+
+                        <!-- NIT -->
+                        <div class="mb-3">
+                            <label for="nit" class="form-label">NIT</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nit"
+                                placeholder="0123-456789-012-3"
+                            />
+                            <div class="form-text">Formato: ####-######-###-#</div>
+                            <div class="invalid-feedback">
+                                El NIT debe tener el formato ####-######-###-#.
+                            </div>
+                        </div>
+
+                        <!-- Fecha de nacimiento -->
+                        <div class="mb-3">
+                            <label for="fechaNacimiento" class="form-label">
+                                Fecha de nacimiento (dd/mm/aaaa)
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="fechaNacimiento"
+                                placeholder="25/12/2000"
+                            />
+                            <div class="form-text">
+                                Día y mes en dos dígitos, año en cuatro. Ej: 05/09/2002.
+                            </div>
+                            <div class="invalid-feedback">
+                                La fecha debe tener el formato válido dd/mm/aaaa.
+                            </div>
+                        </div>
+
+                        <!-- Correo electrónico -->
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo electrónico</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="correo"
+                                placeholder="correo@ejemplo.com"
+                            />
+                            <div class="invalid-feedback">
+                                Ingrese un correo electrónico válido.
+                            </div>
+                        </div>
+
+                        <!-- Edad -->
+                        <div class="mb-3">
+                            <label for="edad" class="form-label">Edad</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="edad"
+                                placeholder="18"
+                            />
+                            <div class="form-text">Solo números (años de edad).</div>
+                            <div class="invalid-feedback">
+                                La edad debe ser un número entero válido.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Enviar ficha
+                        </button>
+                    </form>
+
+                    <div class="alert alert-success mt-3 d-none" id="mensajeExito">
+                        ¡Formulario válido! Datos listos para ser enviados.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/validacionesEstudiante.js"></script>
+</body>
+</html>

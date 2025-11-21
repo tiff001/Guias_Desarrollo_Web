@@ -40,13 +40,155 @@
                                 Formulario
                             </a>
                         </li>
+                         <li class="text-center">
+                            <a href="validacionesEstudiante.html" class="nav-link text-white">
+                                <i class="bi bi-person-badge bi-2 d-block"></i>
+                                Ficha estudiante
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
     <div class="container-lg">
-           <!-- CONTINUAR CON EL CODIGO AQUI -->        
+        <!-- CONTINUAR CON EL CODIGO AQUI --> 
+        <div class="row">
+            <div class="col-12 shadow-lg p-3 mt-5 bg-body rounded">
+                <h3>Expediente médico</h3>
+                <form id="idForm">
+                    <div class="row">
+                           <div class="col-lg-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtNombre" placeholder="Nombre del paciente" />
+                                <label for="idTxtNombre">
+                                    <i class="bi bi-person-circle"></i> Nombre del paciente
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtApellido" placeholder="Apellido del paciente" />
+                                <label for="idTxtApellido">
+                                    <i class="bi bi-person-circle"></i> Apellido del paciente
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="idTxtFechaNacimiento" placeholder="Fecha de nacimiento" pattern="\d{2}/\d{2}/\d{4}" />
+                                <label for="idTxtFechaNacimiento">
+                                    <i class="bi bi-calendar-date"></i> Fecha nacimiento
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 pt-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="rdSexo" id="idRdMasculino" />
+                                <label class="form-check-label" for="idRdMasculino">
+                                    Hombre
+                                </label>
+                                 </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="rdSexo" id="idRdFemenino" />
+                                <label class="form-check-label" for="idRdFemenino">
+                                    Mujer
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-lg-6 pt-3">
+                            <select class="form-select" aria-label="pais" id="idCmbPais">
+                                <option value="0" selected>Seleccione un País</option>
+                                <option value="1">El Salvador</option>
+                                <option value="2">Honduras</option>
+                                <option value="3">Panamá</option>
+                                <option value="4">Costa Rica</option>
+                                <option value="5">Belice</option>
+                                <option value="6">Nicaragua</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 pt-3">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Dirección" id="idTxtDireccion" rows="4"></textarea>
+                                <label for="idTxtDireccion">
+                                    <i class="bi bi-geo"></i> Dirección
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 pt-3">
+                            <button id="idBtnAgregar" type="button" class="btn btn-success">
+                                <i class="bi bi-person-plus-fill"></i> Guardar Datos
+                            </button>
+                            <button id="idBtnMostrar" type="button" class="btn btn-warning">
+                                <i class="bi bi-people"></i> Mostrar personas
+                            </button>
+                            <button id="idBtnLimpiar" type="button" class="btn btn-danger">
+                                <i class="bi bi-trash"></i> Limpiar formulario
+                            </button>
+                            <button id="idBtnAgregarPais" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#idModal">
+                                <i class="bi bi-map-fill"></i> Nuevo País
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 shadow-lg p-3 mt-5 bg-body rounded">
+                <h3>Pacientes registrados</h3>
+                <div id="idTablaPacientes">
+                    Ninguno
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPONENTE MODAL DE BOOTSTRAP-->
+        <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalLabel">Agregando nuevo país</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="idModalForm">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idNombrePais" placeholder="Nombre del país" />
+                                <label for="idNombrePais">
+                                    <i class="bi bi-map"></i> Nombre del país
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="idBtnAddPais" data-bs-dismiss="modal">
+                            <i class="bi bi-plus-circle"></i> Agregar país
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERMITE MOSTRAR NOTIFICACIONES -->
+        <div class="toast-container top-0 start-50 translate-middle-x pt-4 mt-1" style="z-index: 1035;">
+            <div id="idNotificacion" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <i class="bi bi-bell"></i>
+                    <strong class="me-auto">Notificación</strong>
+                    <small>Hace un momento</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body" id="idMensaje">
+                </div>
+            </div>
+        </div>
+        
     </div>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../js/formulario.js" defer></script>

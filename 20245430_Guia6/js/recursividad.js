@@ -8,15 +8,9 @@ const validarNumero = function (e) {
     let validar = /^[0-9]{1}$/;
     let tecla = e.key;
 
-    /*
-    .test válida que la expresión regular coincida con el valor ingresado
-    podrá observar que al intentar teclear una letra u otro caracter diferente
-    a un número este no se escribe en el campo
-    */
     if (!validar.test(tecla)) e.preventDefault();
 };
 
-// definiendo el evento keypress para el campo
 campo.addEventListener("keypress", validarNumero);
 
 // Trabajando con el boton Calcular

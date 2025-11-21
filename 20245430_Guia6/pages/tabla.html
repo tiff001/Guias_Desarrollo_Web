@@ -40,48 +40,78 @@
                                 Formulario
                             </a>
                         </li>
+                        <li class="text-center">
+                            <a href="validacionesEstudiante.html" class="nav-link text-white">
+                                <i class="bi bi-person-badge bi-2 d-block"></i>
+                                Ficha estudiante
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
     <div class="container-lg">
-        <!-- CONTINUAR CON EL CODIGO AQUI -->
-         <div class="row">
+        <div class="row">
             <div class="col-12">
                 <div class="shadow-lg p-3 mt-5 bg-body rounded">
                     <div class="row">
                         <div class="col-12">
                             <h3>Generando tabla con funciones</h3>
-                            <button id="idBtnNewTable" type="button" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#idModal">
-                            <i class="bi bi-table"></i> Crear tabla
+                            <button id="btnModalTabla" type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#modalTabla">
+                                <i class="bi bi-table"></i> Crear tabla
                             </button>
-
-                            <div class="col-12">
-                                <div class="idDivResultado" class="fs-6 p-3"></div>
-                            </div>
+                        </div>
+                        <div class="col-12">
+                            <!-- Contenedor donde se mostrará la tabla -->
+                            <div id="idDivResultado" class="fs-6 p-3"></div>
                         </div>
                     </div>
                 </div>
             </div>
-         </div>
-         <!--COMPONENTE MODAL DE BOOTSTRAP-->
-         <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        </div>
+
+        <!-- COMPONENTE MODAL DE BOOTSTRAP -->
+        <div class="modal fade" id="modalTabla" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="modalLabel">Definición de tabla</h1>
-                        <button type="button" class="btn-close" data-bs-dismss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title fs-5" id="modalLabel">Definición de tabla</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal">
+                    <div class="modal-body">
+                        <!-- Formulario para definir filas y columnas -->
                         <form id="idForm">
-                            
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="idNumFilas" placeholder="Número de filas"
+                                    value="1" min="1" />
+                                <label for="idNumFilas">
+                                    <i class="bi bi-columns"></i> Número de filas
+                                </label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="idNumColumnas"
+                                    placeholder="Número de columnas" value="1" min="1" />
+                                <label for="idNumColumnas">
+                                    <i class="bi bi-layout-three-columns"></i> Número de columnas
+                                </label>
+                            </div>
                         </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <i class="bi bi-x-circle"></i> Cerrar
+                        </button>
+                        <!-- Se esta llamando una funcion directamente desde el boton por medio del evento onclick -->
+                        <button type="button" class="btn btn-primary" onclick="crearTabla()" id="idBtnCrearTabla"
+                            data-bs-dismiss="modal">
+                            <i class="bi bi-plus-circle"></i> Crear tabla
+                        </button>
                     </div>
                 </div>
             </div>
-         </div>
+        </div>
     </div>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../js/tabla.js" defer></script>
