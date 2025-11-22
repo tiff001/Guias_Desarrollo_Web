@@ -1,3 +1,4 @@
+
 const formulario = document.forms["frmRegistro"];
 const button = formulario.elements["btnRegistro"];
 const modal = new bootstrap.Modal(document.getElementById("idModal"), {});
